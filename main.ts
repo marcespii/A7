@@ -17,7 +17,7 @@ input.onButtonPressed(Button.A, function () {
     if (mimano == 3) {
         basic.showIcon(IconNames.Duck)
     }
-    if (mimano == 4) {
+    if (true) {
         basic.showIcon(IconNames.Ghost)
     }
 })
@@ -40,23 +40,39 @@ basic.forever(function () {
         if (mimano == tumano) {
             basic.showIcon(IconNames.No)
         } else {
-            if (mimano == 2 && tumano == 1) {
+            if (mimano == 0 && tumano == 2 || mimano == 0 && tumano == 3) {
                 basic.showIcon(IconNames.Happy)
             } else {
-                if (mimano == 1 && tumano == 0) {
-                    basic.showIcon(IconNames.Happy)
+                if (mimano == 0 && tumano == 1 || mimano == 0 && tumano == 4) {
+                    basic.showIcon(IconNames.Skull)
                 } else {
-                    if (mimano == 0 && tumano == 2) {
+                    if (mimano == 1 && tumano == 0 || mimano == 1 && tumano == 4) {
                         basic.showIcon(IconNames.Happy)
                     } else {
-                        if (mimano == 1 && tumano == 0) {
+                        if (mimano == 1 && tumano == 2 || mimano == 1 && tumano == 3) {
                             basic.showIcon(IconNames.Skull)
                         } else {
-                            if (mimano == 2 && tumano == 0) {
-                                basic.showIcon(IconNames.Skull)
+                            if (mimano == 2 && tumano == 1 || mimano == 2 && tumano == 3) {
+                                basic.showIcon(IconNames.Happy)
                             } else {
-                                if (mimano == 0 && tumano == 1) {
+                                if (mimano == 2 && tumano == 4 || mimano == 2 && tumano == 0) {
                                     basic.showIcon(IconNames.Skull)
+                                } else {
+                                    if (mimano == 3 && tumano == 1 || mimano == 3 && tumano == 4) {
+                                        basic.showIcon(IconNames.Happy)
+                                    } else {
+                                        if (mimano == 3 && tumano == 0 || mimano == 3 && tumano == 2) {
+                                            basic.showIcon(IconNames.Skull)
+                                        } else {
+                                            if (mimano == 4 && tumano == 0 || mimano == 4 && tumano == 2) {
+                                                basic.showIcon(IconNames.Happy)
+                                            } else {
+                                                if (mimano == 4 && tumano == 1 || mimano == 4 && tumano == 3) {
+                                                    basic.showIcon(IconNames.Skull)
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
